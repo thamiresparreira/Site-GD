@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 5;
+  background-color: #ffffff;
+  
+}
+
+
+.container {
+  width: 90%; /* Define a largura como 90% da tela */
+  max-width: 1000px; /* Aumente para 1000px ou outro valor que preferir */
+  margin:  auto; /* Centraliza o conteúdo */
+  padding: 20px 40px; /* Adicione padding lateral, por exemplo, 40px *
+  background-color: #f5f5f5a8; /* Fundo branco para o container */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-radius: 8px; /* Bordas arredondadas */
+
+}
+
+h1 {
+  text-align: center; /* Centraliza o título */
+  color: #2c3e50; /* Cor do texto */
+}
+
+p {
+  line-height: 1.6; /* Altura da linha para melhor legibilidade */
+  color: #34495e; /* Cor do texto */
+}
+
+
+html {
+  scroll-behavior: smooth; /* Rolagem suave */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #F7EDE4;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #F7EDE4;
+  height: 70px;
+  position: relative;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #E59C9F;
+  text-align: center;
+  padding: 25px 16px;
+  text-decoration: none;
+  font-family: "Jost", sans-serif;
+  font-size: 19px;
+}
+
+.titulo {
+  font-family: "Jost", sans-serif;
+  font-size: 38px;
+  color: #7F8978;
+}
+
+li a:hover {
+  background-color: #ecc9cd;
+  height: 70px;
+}
+
+.header1 {
+  background-color: #C2D8B0;
+  height: 35px;
+}
+
+.rodape {
+  background-color: #E59C9F;
+  position: relative;
+  width: 100%;
+  height: 320px; /* Define a altura do rodapé */
+}
+
+.logo img {
+  position: relative;
+  right: -1420px;
+}
+
+.sectionfour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 170px; /* Espaçamento entre as imagens */
+  position: relative;
+  padding: 100px;
+  }
+
+.img_redonda, .img_redonda2, .img_redonda3 {
+  border-radius: 50%;
+  height: 250px;
+  transition: transform 0.3s;
+}
+
+.img_redonda {
+  left: 0;
+}
+
+.img_redonda2 {
+  left: 0;
+  margin-top: -140px; /* Eleva a imagem do meio */
+}
+
+.img_redonda3 {
+  left: 0;
+}
+
+.gallery-container {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.gallery {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.gallery div {
+  position: relative;
+  width: 255px; /* Definir largura e altura fixas para imagens quadradas */
+  height: 255px;
+  margin-right: 20px; /* Espaçamento entre as imagens */
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.desc {
+  position: relative;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  opacity: 0; /* Corrigido para 0 */
+  transition: opacity 0.8s ease;
+}
+
+.gallery div:hover .desc {
+  opacity: 1; /* Mostra a descrição ao passar o mouse */
+}
+
+/* Setas de navegação */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #C2D8B0;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.10s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Estilos para a barra de rolagem */
+::-webkit-scrollbar {
+  width: 16px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Cor do fundo do trilho */
+  border-radius: 8px; /* Bordas arredondadas do trilho */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ebc2c3; /* Cor do polegar */
+  border-radius: 16px; /* Bordas arredondadas do polegar */
+  border: 3px solid #f0f0f0; /* Margem ao redor do polegar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #e79598; /* Cor mais escura ao passar o mouse */
+}
+
+/* Fonte nomes sem ser reponsivo */
+.card-caption{
+  margin-top: 10px; /* Espaçamento entre a imagem e a legenda */
+  font-family: 'Jost', sans-serif; /* Mesma fonte dos títulos */
+  font-size: 20px; /* Tamanho da fonte da legenda */
+  color: #333; /* Cor do texto */
+  text-align: center; /* Centraliza o texto da legenda */
+  line-height: 1.5; /* Ajusta o espaçamento entre linhas */
+  padding: 0 10px; /* Adiciona um padding para evitar que o texto encoste nas bordas */
+
+}
+
+/*outra responsividade A71 */
+
+/* Estilo do menu hambúrguer */
+.menu-toggle {
+  display: none; /* Inicialmente escondido */
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001; /* Certifica que o menu fique acima do conteúdo */
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: #E59C9F;
+  margin: 3px 0;
+}
+
+/* Estilo da logo */
+.logo {
+  display: flex; /* Usar flex para alinhar a logo */
+  justify-content: flex-end; /* Alinha à direita em telas grandes */
+  padding: 48px;
+
+}
+
+/* Estilo do menu de navegação */
+.nav {
+  display: flex; /* Exibe como linha em telas grandes */
+  justify-content: center; /* Centraliza o conteúdo */
+  align-items: center;
+}
+
+.nav a {
+  pointer-events: none; /* Desativa a interação com links em telas grandes */
+  text-decoration: none; /* Remove sublinhado dos links */
+  padding: 10px 15px;
+  color: #000;
+}
+
+/* Estilos adicionais para foco em links */
+.nav a:focus {
+  outline: 2px solid #E59C9F; /* Estilo de foco */
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* Esconde o menu de navegação padrão em telas pequenas */
+    flex-direction: column;
+    background-color: #F7EDE4; /* Cor de fundo do menu hambúrguer */
+    position: absolute;
+    top: 60px; /* Abaixo da logo */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .nav li {
+    text-align: center; /* Centraliza os itens do menu */
+    padding: 10px 0; /* Espaçamento entre os itens */
+  }
+
+  .nav.show {
+    display: flex; /* Mostra o menu quando ativado */
+  }
+
+  .menu-toggle {
+    display: flex; /* Mostra o menu hambúrguer em telas menores */
+  }
+
+  .nav a {
+    pointer-events: auto; /* Ativa a interação com links em telas menores */
+  }
+
+  .logo {
+    justify-content: flex-start; /* Alinha a logo à esquerda em telas pequenas */
+    position: absolute; /* Posiciona a logo sobre o menu */
+    top: 0;
+    left: 10px;
+    z-index: 1001; /* Certifica que a logo fique acima do menu */
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none; /* Esconde o menu hambúrguer em telas maiores */
+  }
+
+  .logo {
+    justify-content: flex-end; /* Alinha a logo à direita em telas grandes */
+    position: static; /* Posição normal em telas maiores */
+  
+  }
+
+  .nav a {
+    pointer-events: auto; /* Ativa a interação com links em telas grandes */
+  }
+}
+/* Alinhamento da logo à direita em telas grandes */
+.header1 {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+}
+
+.logo {
+  height: 70px; /* Tamanho da logo */
+  position: relative;
+  right: -50px;
+  transition: all 0.3s ease-in-out;
+
+}
+
+/* Estilo responsivo para dispositivos menores */
+@media screen and (max-width: 768px) {
+  .header1 {
+    justify-content: center; /* Centraliza a logo em telas pequenas */
+  }
+  
+  .logo {
+    height: 65px; /* Ajusta o tamanho da logo em dispositivos menores */
+    position: relative;
+    left: -180px;
+    margin-top: -45px;
+  
+  }
+}
+
+/* Estilo para ajustar as imagens redondas */
+.img_redonda, .img_redonda2, .img_redonda3 {
+  border-radius: 50%;
+  height: 250px;
+  width: 250px; /* Garante que as imagens fiquem proporcionais */
+  object-fit: cover; /* Ajusta a imagem sem deformar */
+  transition: transform 0.3s;
+}
+
+@media (max-width: 768px) {
+  .sectionfour {
+    display: flex;
+    flex-direction: column; /* Coluna para telas pequenas */
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Menor espaçamento em telas menores */
+    overflow: hidden; /* Oculta conteúdo extra ao usar o slider */
+  }
+
+  .img_redonda, .img_redonda2, .img_redonda3 {
+    width: 200px;
+    height: 200px; /* Reduz o tamanho em telas menores */
+  }
+
+  /* As imagens no responsivo */
+  .img_redonda, .img_redonda2, .img_redonda3 {
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+    margin: 10px;}
+
+
+/* Estilo do container da seção */
+.sectionfour {
+  display: flex; /* Alinha os cards na horizontal */
+  justify-content: center; /* Centraliza os cards horizontalmente */
+  flex-wrap: wrap; /* Permite que os cards se movam para a próxima linha se não houver espaço */
+  /* Ajustes para telas grandes, as fotos */
+  justify-content: center; /* Mantém centralização em telas grandes */
+}
+
+/* Estilo do card */
+.card {
+  display: flex; /* Permite o alinhamento vertical da imagem e legenda */
+  flex-direction: column; /* Alinha a imagem acima da legenda */
+  align-items: center; /* Centraliza o texto da legenda */
+  margin: 20px; /* Espaçamento entre os cards */
+  text-align: center; /* Centraliza o texto dentro do card */
+}
+
+/* Estilo das imagens redondas */
+.img_redonda {
+  border-radius: 50%; /* Torna a imagem redonda */
+  width: 250px; /* Largura da imagem */
+  height: 250px; /* Altura da imagem */
+  object-fit: cover; /* Mantém a qualidade da imagem */
+  transition: transform 0.3s; /* Transição suave */
+  /* Ajustes responsivos para telas menores as imagens redondas*/
+  width: 200px; /* Reduz a largura da imagem */
+  height: 200px; /* Reduz a altura da imagem */
+}
+
+/* Legenda com a fonte Jost e centralizada */
+.card-caption {
+  margin-top: 10px; /* Espaçamento entre a imagem e a legenda */
+  font-family: 'Jost', sans-serif; /* Mesma fonte dos títulos */
+  font-size: 16px; /* Tamanho da fonte da legenda */
+  color: #333; /* Cor do texto */
+  text-align: center; /* Centraliza o texto da legenda */
+  line-height: 1.5; /* Ajusta o espaçamento entre linhas */
+  padding: 0 10px; /* Adiciona um padding para evitar que o texto encoste nas bordas */
+}
+
+
+/*paragrafoooos*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 5;
+  background-color: #ffffff;
+}
+
+.container {
+  width: 90%; /* Define a largura como 90% da tela */
+  max-width: 1000px; /* Aumente para 1000px ou outro valor que preferir */
+  margin:  auto; /* Centraliza o conteúdo */
+  padding: 20px 40px; /* Adicione padding lateral, por exemplo, 40px *
+  background-color: #f5f5f5a8; /* Fundo branco para o container */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-radius: 8px; /* Bordas arredondadas */
+
+}
+
+h1 {
+  text-align: center; /* Centraliza o título */
+  color: #213427; /* Cor do texto */
+}
+h3 {
+  text-align: center; /* Centraliza o título */
+  color: #26b665c9; /* Cor do texto */
+}
+
+
+
+p {
+  line-height: 1.6; /* Altura da linha para melhor legibilidade */
+  color: #34495e; /* Cor do texto */
+}
+
+.hashtag {
+  text-align: center; /* Centraliza as hashtags */
+  font-weight: bold; /* Destaca as hashtags */
+  color: #25633f; /* Cor verde para as hashtags */
+}
+
+
+
+}

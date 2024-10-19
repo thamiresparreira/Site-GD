@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> GreenDump </title>
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo.png">
+  <link rel="stylesheet" href="tha1.css">
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header class="header1">  
+    <!-- Logo -->
+    <img src="assets/img/logo.png" alt="Logo" class="logo"> 
+  </header>
+
+  <!-- Navegação -->
+  <nav>
+    <!-- Botão do menu hambúrguer para dispositivos móveis -->
+    <div class="menu-toggle" id="mobile-menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    
+    <!-- Menu de navegação -->
+    <ul id="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projeto">Projeto</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#nos">Quem Somos</a></li>
+    </ul>
+  </nav>
+
+  
+
+  <!-- Seção 1 -->
+  <div class="sectionone" id="home">
+
+    <div class="container">
+      <h1>Bem-vindos à Greendump</h1>
+      <p>Um descarte inteligente em conjunto com um futuro verde! Na Greendump, acreditamos que a combinação da tecnologia e sustentabilidade começa com ações concretas e conscientes. Com o aumento do consumo de dispositivos eletrônicos, a correta destinação de pilhas torna-se uma ação essencial para a preservação do meio ambiente. Pensando nisso, desenvolvemos um sistema automatizado de coleta que visa simplificar e otimizar o descarte responsável desses materiais, garantindo que sejam retirados da circulação de nosso cotidiano de forma eficiente e segura.</p>
+      <p class="hashtag">#GreenDump #Greenfuture</p>
+      <p>Estamos comprometidos em criar um futuro mais sustentável e convidamos você a se juntar a nós nessa missão. Juntos, podemos fazer a diferença e promover um ambiente mais limpo e saudável para as futuras gerações. Descubra como nosso sistema funciona e como você pode contribuir para essa causa!</p>
+  </div>
+
+  <!-- Seção 2 - Projeto -->
+  <div class="sectiontwo" id="projeto">
+    <p class="titulo">Projeto</p>
+
+    <p>Nosso projeto consiste em um sistema automatizado para coleta de pilhas, incluindo pilhas alcalinas (AA) e (AAA). Tencionamos a utilização da tecnologia em sincronia com o desenvolvimento sustentável, visando as ODS's 11.6 (Cidades e Comunidades Sustentáveis), 12.5 (Consumo e Produção Responsáveis) e 15 (Vida Terrestre).</p>
+    <p>Com todo o nosso objetivo sustentável, o projeto permitirá a contagem e o peso dos itens descartados, o que é essencial na contribuição para os depósitos. Além disso, nosso sistema utiliza a gamificação para interagir com as pessoas e estimular a sustentabilidade na comunidade. O público-alvo da nossa iniciativa são os estudantes da Etec, tendo a total interação dos jovens de uma forma divertida .</p>
+    <p> Acompanhe algumas fotos pela trajetória a qual passamos 
+      :)</p>
+    <!-- Galeria de imagens -->
+    <div class="gallery-container">
+      <div class="gallery" id="gallery">
+        <div>
+          <img src="assets/nos2022.jpeg" alt="Cinque Terre">
+          <div class="desc">Cinque Terre</div>
+        </div>
+        <div>
+          <img src="assets/2022.jpeg" alt="Forest">
+          <div class="desc">Floresta</div>
+        </div>
+        <div>
+          <img src="assets/2023.jpeg" alt="Northern Lights">
+          <div class="desc">Aurora Boreal</div>
+        </div>
+        <div>
+          <img src="assets/tha_koren.jpeg" alt="Mountains">
+          <div class="desc">Montanhas</div>
+        </div>
+     
+      <!-- Setas de navegação da galeria -->
+      <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+      <a class="next" onclick="moveSlide(1)">&#10095;</a>
+    </div>
+  </div>
+<br>
+  <!-- Seção 3 - Sobre -->
+  <div class="sectionthree" id="sobre">
+    <p class="titulo">Sobre</p>
+    <p> Nossa jornada começou em 2022, movida por um querer e um entusiasmo por um futuro mais verde e limpo. Desde o nosso início, passamos por várias transformações que nos tornaram mais criativos e conectados com o que realmente importa: cuidar do nosso planeta. Acreditamos que cada pequena mudança conta e que, juntos, podemos fazer a diferença. Estamos aqui para compartilhar soluções sustentáveis que tornam a vida mais leve e cheia de possibilidades. Venha conosco nessa aventura rumo a um mundo incrível e mais sustentável! GreenDump agradece desde já e também conheça nossa equipe abaixo.  </p>
+  </div>
+
+
+<!-- Seção 4 - Quem Somos -->
+<div class="sectionfour" id="nos">
+  <div class="card">
+    <img class="img_redonda" src="assets/perfilnos/koren.jpg.jpeg" alt="Ícone 1">
+    <p class="card-caption">Giovana Koren</p> <!-- Legenda abaixo da imagem -->
+  </div>
+  <div class="card">
+    <img class="img_redonda" src="assets/perfilnos/seijas.jpg.jpeg" alt="Ícone 2">
+    <p class="card-caption">Giovanna Seijas</p> <!-- Legenda abaixo da imagem -->
+  </div>
+  <div class="card">
+    <img class="img_redonda" src="assets/perfilnos/thamires.jpg.jpeg" alt="Ícone 3">
+    <p class="card-caption">Thamires Parreira</p> <!-- Legenda abaixo da imagem -->
+  </div>
+</div>
+
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="rodape"></div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./script.js"></script>
+  <script>
+    // Script para alternar a visibilidade do menu em telas pequenas
+    const menuToggle = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show'); // Alterna a visibilidade do menu
+    });
+  </script>
+</body>
+</html>
